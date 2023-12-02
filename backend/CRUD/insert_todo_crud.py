@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from DB.models import Todo
 
 
-def insert_todo(db: Session, todo_data: Todo):
+def insert_todo_crud(db: Session, todo_data: Todo):
     try:
         todo = Todo(**todo_data.dict())
         db.add(todo)

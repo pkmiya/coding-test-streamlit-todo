@@ -22,14 +22,13 @@ def create_todo():
                 'genre': genre
             }
             response = post_data(data)
-            print(response, type(response))
             handle_response(response, '登録')
 
             time.sleep(1)
             st.rerun()
 
 
-def fetch_todos():
+def fetch_data():
     url = 'http://127.0.0.1:8000/todos'
     response = requests.get(url)
 
@@ -79,7 +78,7 @@ if page == '新規登録':
 
 elif page == '未完了リスト':
     st.title('未完了リスト')
-    records = fetch_todos()
+    records = fetch_data()
     uncompleted_todos = [
         record for record in records if not record.get('is_done')]
 
@@ -114,7 +113,7 @@ elif page == '未完了リスト':
 
 elif page == '完了リスト':
     st.title('完了リスト')
-    records = fetch_todos()
+    records = fetch_data()
     completed_todos = [record for record in records if record.get('is_done')]
 
     if not completed_todos:
