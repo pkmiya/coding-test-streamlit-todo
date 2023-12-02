@@ -136,6 +136,7 @@
 ## Todo
 - [ ] move API server address to `.env` file
 - [ ] make use of priority and category
+- [ ] sorting
 - [ ] user features (auth, login, logout, etc.)
 
 ## Chore
