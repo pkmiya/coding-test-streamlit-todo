@@ -2,10 +2,6 @@ from pydantic import BaseModel
 import datetime
 
 
-from pydantic import BaseModel
-import datetime
-
-
 class TodoCreateSchema(BaseModel):
     deadline: datetime.date
     todo: str
@@ -31,4 +27,3 @@ class TodoUpdateSchema(BaseModel):
     # enable ORM mode for SQLAlchemy
     class Config:
         orm_mode = True
-

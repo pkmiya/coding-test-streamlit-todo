@@ -1,5 +1,11 @@
 # *Table of Contents*
 - [*Table of Contents*](#table-of-contents)
+- [About this App](#about-this-app)
+  - [Outline](#outline)
+  - [Screenshots](#screenshots)
+- [Folder structure](#folder-structure)
+  - [Folder name and usage](#folder-name-and-usage)
+  - [Backend folder structure](#backend-folder-structure)
 - [Setup](#setup)
   - [Database](#database)
     - [Install PostgreSQL](#install-postgresql)
@@ -10,7 +16,34 @@
   - [Backend](#backend-1)
   - [Frontend](#frontend)
 - [Other](#other)
-    - [Chore](#chore)
+  - [Todo](#todo)
+  - [Chore](#chore)
+
+# About this App
+## Outline
+- This app has three features:
+  - **New todo**: Create a new todo
+  - **Incomplete todo**: View, finish, or delete incomplete todos
+  - **Completed todo**: View completed todos
+## Screenshots
+![New todo](./docs/img/1.png)
+![Incomplete todo ](./docs/img/2.png)
+![Completed todo](./docs/img/3.png)
+
+# Folder structure
+## Folder name and usage
+- Backend: API server
+- Frontend: Web server
+
+## Backend folder structure
+| Folder name | Usage |
+| ---- | ---- |
+| `CRUD` | SQL queries |
+| `DB` | Database connection and models |
+| `ROUTER` | API endpoints |
+| `SCHEMA` | Pydantic models |
+| `main.py` | Main file |
+| `requirements.txt` | pip dependencies |
 
 
 # Setup
@@ -100,5 +133,10 @@
 - Type `streamlit run front.py` to start the frontend server
 
 # Other
-### Chore
+## Todo
+- [ ] move API server address to `.env` file
+- [ ] make use of priority and category
+- [ ] user features (auth, login, logout, etc.)
+
+## Chore
 - Type `find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf` to remove cache files
